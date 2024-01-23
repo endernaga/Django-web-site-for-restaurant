@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <a href="{% url 'restaurant:cookers_update' pk=cook.id%}" class="top-right-position btn btn-primary">Обновити інформацію про себе</a>
   <h1>Username : {{ cook.username }}</h1>
   <h2>First name: <b>{{ cook.first_name }}</b></h2>
   <h2>Last name: <b>{{ cook.last_name }}</b></h2>

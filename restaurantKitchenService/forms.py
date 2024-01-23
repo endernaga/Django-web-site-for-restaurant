@@ -16,7 +16,17 @@ class CookersCreationForm(UserCreationForm):
         model = Cook
         fields = UserCreationForm.Meta.fields + (
             "year_of_expirience",
+            "first_name",
+            "last_name"
         )
+
+    def clean(self):
+        super().clean()
+        year_of_expirience = self.cleaned_data.get("year_of_expirience")
+        if year_of_expirience > 80:
+            self._errors["year_of_expirience"] = self.error_class(["Year of expirience is to big "])
+
+        return self.cleaned_data
 
 
 class DishCreationForm(forms.ModelForm):

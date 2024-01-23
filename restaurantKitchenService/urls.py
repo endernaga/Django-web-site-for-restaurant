@@ -14,7 +14,7 @@ from restaurantKitchenService.views import (
     UpdateDishTypeView,
     DeleteDishTypeView,
     DetailCookerView,
-    CreateCookerView)
+    CreateCookerView, UpdateCookerView)
 
 urlpatterns = [
     path("", index, name="index"),
@@ -34,6 +34,7 @@ urlpatterns = [
         DetailCookerView.as_view(),
         name="cookers_detail"),
     path("cookers/create/", CreateCookerView.as_view(), name="cookers_create"),
+    path("coockers/<int:pk>/update", UpdateCookerView.as_view(), name="cookers_update"),
     path("dishesTypes/", AllDishTypesView.as_view(), name="dishTypes"),
     path(
         "dishesTypes/create/",

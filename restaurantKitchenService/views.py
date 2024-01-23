@@ -118,6 +118,11 @@ class DetailCookerView(generic.DetailView):
     queryset = Cook.objects.all().prefetch_related("cooks")
 
 
+class UpdateCookerView(LoginRequiredMixin, generic.UpdateView):
+    model = Cook
+    form_class = CookersCreationForm
+
+
 class AllDishTypesView(generic.ListView):
     model = DishType
     context_object_name = "dishTypes"
