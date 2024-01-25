@@ -1,5 +1,11 @@
 # Restaurant kitchen service
 > created for mate academy
+https://restaurant-kitchen-service2-0.onrender.com
+### Credentials
+```
+login: user
+password: user12345
+```
 
 ## Installing / Getting started
 
